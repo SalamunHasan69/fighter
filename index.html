@@ -23,6 +23,12 @@
       width: 100px;
       text-align: center;
     }
+
+    #xyz {
+      display: inline-block;
+      width: auto;
+      text-align: right;
+    }
   </style>
 </head>
 
@@ -40,14 +46,124 @@
     </div>
   </header>
   <main class="mt-14 pb-10">
-
+    <section class="w-9/12 mx-auto">
+      <div class="grid grid-cols-2 gap-4 divide-x">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="./images/img-1.jpg" class="w-full h-20" alt="">
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Donnie Yen</h2>
+              <div class="card-actions mt-6">
+                <button class="btn btn-primary px-8">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="./images/img-3.jpg" class="w-full h-20" alt="">
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Bruce Lee</h2>
+              <div class="card-actions mt-6">
+                <button class="btn btn-primary px-8">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="./images/img-4.jpg" class="w-full h-20" alt="">
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Jackie Chan</h2>
+              <div class="card-actions mt-6">
+                <button class="btn btn-primary px-8">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="./images/img-5.jpg" class="w-full h-20" alt="">
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Vidyut Jammwal</h2>
+              <div class="card-actions mt-6">
+                <button class="btn btn-primary px-8">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="./images/img-6.jpg" class="w-full h-20" alt="">
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Tony Jaa</h2>
+              <div class="card-actions mt-6">
+                <button class="btn btn-primary px-8">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="./images/img-7.jpg" class="w-full h-20" alt="">
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Akshay Kumar</h2>
+              <div class="card-actions mt-6">
+                <button class="btn btn-primary px-8">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ... -->
+        <section class="grid grid-cols-2 gap-4">
+          <div>
+            <ul class="menu menu-compact lg:menu-normal bg-base-100 w-80 h-80 p-2">
+              <h2 class="text-center text-3xl italic font-bold text-black">Selected - <span
+                  class="text-fuchsia-50">0</span>
+              </h2>
+              <li><a>1.</a></li>
+              <li><a>2.</a></li>
+              <li><a>3.</a></li>
+              <li><a>4.</a></li>
+              <li><a>5.</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-center text-3xl italic font-bold text-black">Budget</h2>
+            <div class="my-4 items-center text-center">
+              <label>Per Player</label>
+              <input class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="" id="">
+            </div>
+            <div class="items-center text-center">
+              <button class="btn btn-primary px-10">Calculate</button>
+            </div>
+            <div class="my-4 items-center text-center">
+              <label id="xyz">Player Expenses</label>
+              <input class="bg-inherit ml-1 pl-3 py-2	w-32" type="text" name="" id="">
+            </div>
+            <div class="my-4 items-center text-center">
+              <label>Manager</label>
+              <input class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="" id="">
+            </div>
+            <div class="my-4 items-center text-center">
+              <label>Coach</label>
+              <input class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="" id="">
+            </div>
+            <div class="items-center text-center mb-4">
+              <button class="btn btn-primary px-10">Calculate Total</button>
+            </div>
+            <div class="items-center text-center">
+              <label>Total</label>
+              <input class="bg-inherit pl-3 py-2	w-32" type="text" name="" id="">
+            </div>
+          </div>
+      </div>
+    </section>
     </div>
     </section>
   </main>
-  <div class="divider"></div>
-  <footer>
-
-  </footer>
 
 </body>
 

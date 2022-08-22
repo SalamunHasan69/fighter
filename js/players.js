@@ -1,7 +1,11 @@
 const playerArray = [];
 function list(playerList) {
-  console.log(playerList);
+
   const tableBody = document.getElementById('player-name');
+  if (playerList.length > 5) {
+    alert('Cannot select more than 5 player');
+    return;
+  }
   tableBody.innerHTML = '';
   for (let i = 0; i < playerList.length; i++) {
     const name = playerArray[i].playerName;
@@ -19,13 +23,31 @@ function addToList(player) {
     playerName: playerName
   }
   playerArray.push(playerObj);
-  // console.log(playerArray);
   document.getElementById('total-selected-player').innerText = playerArray.length;
   list(playerArray);
-
 }
-
-
-// If(condition){add child}
-// else{alert()
-// Return} 
+function addToFee() {
+  const perPlayerFeeElement = document.getElementById('per-player-fee');
+  const perPlayerFeeString = perPlayerFeeElement.value;
+  const perPlayerFee = parseFloat(perPlayerFeeString);
+  // perPlayerFeeElement.value = '';
+  const totalExpenses = perPlayerFee * playerArray.length;
+  const playerExpensesElement = document.getElementById('player-expenses');
+  const playerExpensesString = playerExpensesElement.value;
+  const playerExpenses = parseFloat(playerExpensesString);
+  playerExpensesElement.value = totalExpenses;
+  const managerFeeAmount = document.getElementById('manager');
+  const managerFeeString = managerFeeAmount.value;
+  const managerFee = parseFloat(managerFeeString);
+  // managerFeeAmount.value = '';
+  const coachFeeAmount = document.getElementById('coach');
+  const coachFeeString = coachFeeAmount.value;
+  const coachFee = parseFloat(coachFeeString);
+  // coachFeeAmount.value = '';
+  const totalCost = totalExpenses + managerFee + coachFee;
+  const totalBalanceElement = document.getElementById('total-balance');
+  const previousBalanceElementString = totalBalanceElement.value;
+  const previousBalanceElement = parseFloat(previousBalanceElementString);
+  const currentBalance = totalCost;
+  totalBalanceElement.value = currentBalance;
+};

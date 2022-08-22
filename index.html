@@ -59,7 +59,7 @@
             <div class="card-body items-center text-center">
               <h2 class="card-title">Donnie Yen</h2>
               <div class="card-actions mt-6">
-                <button class="btn btn-primary px-8" onclick="addToList(this)">Select</button>
+                <button class="x btn btn-primary px-8" onclick="addToList(this)">Select</button>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@
             <div class="card-body items-center text-center">
               <h2 class="card-title">Bruce Lee</h2>
               <div class="card-actions mt-6">
-                <button class="btn btn-primary px-8" onclick="addToList(this)">Select</button>
+                <button class="x btn btn-primary px-8" onclick="addToList(this)">Select</button>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@
             <div class="card-body items-center text-center">
               <h2 class="card-title">Jackie Chan</h2>
               <div class="card-actions mt-6">
-                <button class="btn btn-primary px-8" onclick="addToList(this)">Select</button>
+                <button class="x btn btn-primary px-8" onclick="addToList(this)">Select</button>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@
             <div class="card-body items-center text-center">
               <h2 class="card-title">Vidyut Jammwal</h2>
               <div class="card-actions mt-6">
-                <button class="btn btn-primary px-8" onclick="addToList(this)">Select</button>
+                <button class="x btn btn-primary px-8" onclick="addToList(this)">Select</button>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@
             <div class="card-body items-center text-center">
               <h2 class="card-title">Tony Jaa</h2>
               <div class="card-actions mt-6">
-                <button class="btn btn-primary px-8" onclick="addToList(this)">Select</button>
+                <button class="x btn btn-primary px-8" onclick="addToList(this)">Select</button>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@
             <div class="card-body items-center text-center">
               <h2 class="card-title">Akshay Kumar</h2>
               <div class="card-actions mt-6">
-                <button class="btn btn-primary px-8" onclick="addToList(this)">Select</button>
+                <button class="x btn btn-primary px-8" onclick="addToList(this)">Select</button>
               </div>
             </div>
           </div>
@@ -150,29 +150,30 @@
             <h2 class="text-center text-3xl italic font-bold text-black">Budget</h2>
             <div class="my-4 items-center text-center">
               <label>Per Player</label>
-              <input class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="" id="">
+              <input id="per-player-fee" class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="">
             </div>
             <div class="items-center text-center">
-              <button class="btn btn-primary px-10">Calculate</button>
+              <button id="calculate-btn" class="btn btn-primary px-10" onclick="addToFee()">Calculate</button>
             </div>
             <div class="my-4 items-center text-center">
               <label id="xyz">Player Expenses</label>
-              <input class="bg-inherit ml-1 pl-3 py-2	w-32" type="text" name="" id="">
+              <input id="player-expenses" class="bg-inherit ml-1 pl-3 py-2	w-32" type="text" name="">
             </div>
             <div class="my-4 items-center text-center">
               <label>Manager</label>
-              <input class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="" id="">
+              <input id="manager" class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="" id="">
             </div>
             <div class="my-4 items-center text-center">
               <label>Coach</label>
-              <input class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="" id="">
+              <input id="coach" class="bg-inherit bg-slate-700 pl-3 py-2	w-32" type="text" name="" id="">
             </div>
             <div class="items-center text-center mb-4">
-              <button class="btn btn-primary px-10">Calculate Total</button>
+              <button id="total-calculate-btn" class="btn btn-primary px-10" onclick="addToFee()">Calculate
+                Total</button>
             </div>
             <div class="items-center text-center">
               <label>Total</label>
-              <input class="bg-inherit pl-3 py-2	w-32" type="text" name="" id="">
+              <input id="total-balance" class="bg-inherit pl-3 py-2	w-32" type="text" name="">
             </div>
           </div>
         </section>

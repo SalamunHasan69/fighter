@@ -25,12 +25,16 @@ function addToList(player) {
   playerArray.push(playerObj);
   document.getElementById('total-selected-player').innerText = playerArray.length;
   list(playerArray);
+  player.disabled = true;
 }
 function addToFee() {
   const perPlayerFeeElement = document.getElementById('per-player-fee');
   const perPlayerFeeString = perPlayerFeeElement.value;
   const perPlayerFee = parseFloat(perPlayerFeeString);
-  // perPlayerFeeElement.value = '';
+  if (isNaN(perPlayerFee)) {
+    alert('Please provide a valid number');
+    return;
+  }
   const totalExpenses = perPlayerFee * playerArray.length;
   const playerExpensesElement = document.getElementById('player-expenses');
   const playerExpensesString = playerExpensesElement.value;
@@ -39,15 +43,17 @@ function addToFee() {
   const managerFeeAmount = document.getElementById('manager');
   const managerFeeString = managerFeeAmount.value;
   const managerFee = parseFloat(managerFeeString);
-  // managerFeeAmount.value = '';
   const coachFeeAmount = document.getElementById('coach');
   const coachFeeString = coachFeeAmount.value;
   const coachFee = parseFloat(coachFeeString);
-  // coachFeeAmount.value = '';
   const totalCost = totalExpenses + managerFee + coachFee;
   const totalBalanceElement = document.getElementById('total-balance');
   const previousBalanceElementString = totalBalanceElement.value;
   const previousBalanceElement = parseFloat(previousBalanceElementString);
   const currentBalance = totalCost;
+  if (isNaN(currentBalance)) {
+    alert('Please provide a valid number');
+    return;
+  }
   totalBalanceElement.value = currentBalance;
 };

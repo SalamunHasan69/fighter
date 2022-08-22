@@ -9,15 +9,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
   <style>
-    .bg-img {
-      background-image: url(./images/img-2.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-    }
-
     label {
       display: inline-block;
       width: 100px;
@@ -34,18 +25,19 @@
 
 <body>
   <!-- header-section -->
-  <header class="bg-img w-full">
-    <div class="text-center w-9/12 mx-auto">
+  <header class="grid grid-cols-2 items-center bg-black">
+    <div class="text-center">
       <h1 class="text-7xl	italic font-bold mb-3 text-red-800">Select Dangerous Five</h1>
-      <p class="text-2xl font-medium italic text-amber-800">Amet minim mollit non deserunt ullamco est sit aliqua dolor
-        do
-        amet
-        sint.
-        Velit
-        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
-        nostrud amet.</p>
+      <p class="text-2xl font-medium italic text-amber-700">Karate is a form of Martial arts using kicking, punching,
+        and other kinds of defense styles.Many people learn the art of self-defense. It even builds their confidence
+        in
+        overcoming their fear.</p>
+    </div>
+    <div>
+      <img src="./images/img-2.jpg" alt="">
     </div>
   </header>
+  <div class="divider"></div>
   <!-- main-section -->
   <main class="mt-14 pb-10">
     <section class="w-9/12 mx-auto">
@@ -54,7 +46,7 @@
           <!-- player-1 -->
           <div class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/img-1.jpg" class="w-full h-20" alt="">
+              <img src="./images/img-1.jpg" class="w-full h-25" alt="">
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Donnie Yen</h2>
@@ -66,7 +58,7 @@
           <!-- player-2 -->
           <div class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/img-3.jpg" class="w-full h-20" alt="">
+              <img src="./images/img-3.jpg" class="w-full h-25" alt="">
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Bruce Lee</h2>
@@ -78,7 +70,7 @@
           <!-- player-3 -->
           <div class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/img-4.jpg" class="w-full h-20" alt="">
+              <img src="./images/img-4.jpg" class="w-full h-25" alt="">
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Jackie Chan</h2>
@@ -90,7 +82,7 @@
           <!-- player-4 -->
           <div class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/img-5.jpg" class="w-full h-20" alt="">
+              <img src="./images/img-5.jpg" class="w-full h-25" alt="">
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Vidyut Jammwal</h2>
@@ -102,7 +94,7 @@
           <!-- player-5 -->
           <div class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/img-6.jpg" class="w-full h-20" alt="">
+              <img src="./images/img-6.jpg" class="w-full h-25" alt="">
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Tony Jaa</h2>
@@ -114,7 +106,7 @@
           <!-- player-6 -->
           <div class="card w-full bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/img-7.jpg" class="w-full h-20" alt="">
+              <img src="./images/img-7.jpg" class="w-full h-25" alt="">
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Akshay Kumar</h2>
@@ -157,7 +149,7 @@
             </div>
             <div class="my-4 items-center text-center">
               <label id="xyz">Player Expenses</label>
-              <input id="player-expenses" class="bg-inherit ml-1 pl-3 py-2	w-32" type="text" name="">
+              <input id="player-expenses" class="bg-inherit ml-1 pl-3 py-2	w-32" placeholder="$" type="text" name="">
             </div>
             <div class="my-4 items-center text-center">
               <label>Manager</label>
@@ -173,7 +165,7 @@
             </div>
             <div class="items-center text-center">
               <label>Total</label>
-              <input id="total-balance" class="bg-inherit pl-3 py-2	w-32" type="text" name="">
+              <input id="total-balance" class="bg-inherit pl-3 py-2	w-32" placeholder="$" type="text" name="">
             </div>
           </div>
         </section>

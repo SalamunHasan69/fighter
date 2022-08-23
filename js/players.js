@@ -23,6 +23,9 @@ function addToList(player) {
     playerName: playerName
   }
   playerArray.push(playerObj);
+  if (playerArray.length > 5) {
+    playerList.pop();
+  }
   document.getElementById('total-selected-player').innerText = playerArray.length;
   list(playerArray);
   player.disabled = true;

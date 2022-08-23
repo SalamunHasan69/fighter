@@ -2,7 +2,7 @@ const playerArray = [];
 function list(playerList) {
 
   const tableBody = document.getElementById('player-name');
-  if (playerList.length === 5) {
+  if (playerList.length > 5) {
     alert('This is the last player, no other player can be selected...');
     return;
   }

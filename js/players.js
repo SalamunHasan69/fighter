@@ -2,8 +2,8 @@ const playerArray = [];
 function list(playerList) {
 
   const tableBody = document.getElementById('player-name');
-  if (playerList.length > 5) {
-    alert('Cannot select more than 5 player');
+  if (playerList.length === 5) {
+    alert('This is the last player, no other player can be selected...');
     return;
   }
   tableBody.innerHTML = '';
@@ -24,6 +24,7 @@ function addToList(player) {
   }
   playerArray.push(playerObj);
   if (playerArray.length > 5) {
+    playerArray.pop();
     playerList.pop();
   }
   document.getElementById('total-selected-player').innerText = playerArray.length;
@@ -35,7 +36,7 @@ function addToFee() {
   const perPlayerFeeString = perPlayerFeeElement.value;
   const perPlayerFee = parseFloat(perPlayerFeeString);
   if (isNaN(perPlayerFee)) {
-    alert('Please provide a valid number');
+    alert('Please provide a valid number and fulfil all input field...');
     return;
   }
   const totalExpenses = perPlayerFee * playerArray.length;
@@ -55,7 +56,7 @@ function addToFee() {
   const previousBalanceElement = parseFloat(previousBalanceElementString);
   const currentBalance = totalCost;
   if (isNaN(currentBalance)) {
-    alert('Please provide a valid number');
+    alert('Please provide a valid number and fulfil all input field...');
     return;
   }
   totalBalanceElement.value = currentBalance;
